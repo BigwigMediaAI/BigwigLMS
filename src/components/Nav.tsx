@@ -42,7 +42,7 @@ function Nav() {
   return (
     <nav
       className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
-        isScrolled ? 'bg-white shadow-md' : 'bg-blue-50'
+        isScrolled ? 'bg-white shadow-md' : 'bg-white'
       }`}
     >
       <div className="flex items-center justify-between p-4 md:px-10 relative">

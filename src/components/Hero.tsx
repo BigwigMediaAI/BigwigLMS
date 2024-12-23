@@ -1,106 +1,46 @@
-import styled from 'styled-components';
-import '../App.css';
+import React from "react";
+import social from "../assets/img-bulk-publishing.png"
 
-const Hero = () => {
-    return (
-        <div className="bg-blue-50 pt-20 md:pt-24">
-            <HeroContainer>
-                {/* Left Section - Text Content */}
-                <TextContent>
-                    <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-                        Manage Real Estate Leads Efficiently
-                    </h1>
-                    <p className="text-lg text-gray-600 mb-6">
-                        Our system helps you track, manage, and convert real estate leads with ease. Maximize your efficiency and grow your business today!
-                    </p>
-                    <CallToAction href="#features" className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
-                        Learn More
-                    </CallToAction>
-                </TextContent>
+const Hero: React.FC = () => {
+  return (
+    <section id="home" className="relative flex flex-col lg:flex-row items-center justify-between py-12 px-4 lg:px-24 mt-16">
+      {/* Left Section */}
+      <div className="max-w-lg space-y-6 text-center lg:text-left">
+  <h4 className="text-blue-500 font-semibold text-lg flex items-center justify-center lg:justify-start">
+    Smarter Lead Management
+    <span className="ml-1 text-blue-500">🚀</span>
+  </h4>
+  <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
+    Take Control of Your Leads with Ease
+  </h1>
+  <p className="text-gray-600 leading-relaxed">
+    Simplify the way you manage, track, and nurture leads. From capturing new opportunities to sealing the deal, our powerful lead management tools help you stay ahead of the curve.
+  </p>
+  <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center justify-center lg:justify-start">
+    <button className="bg-blue-600 text-white font-semibold py-3 px-6 rounded hover:bg-blue-700 transition">
+      Get Started Today
+    </button>
+    <button className="border border-blue-600 text-blue-600 font-semibold py-3 px-6 rounded hover:bg-blue-100 transition">
+      Request a Demo
+    </button>
+  </div>
+  <p className="text-gray-500 text-sm">
+    Trusted by teams worldwide | Free trial available
+  </p>
+</div>
 
-                {/* Right Section - Form */}
-                <FormContainer>
-                    <h2 className="text-2xl font-semibold text-gray-800 mb-4">Get Started Now</h2>
-                    <form className="space-y-4">
-                        <div>
-                            <label className="block text-gray-600 text-sm font-medium mb-1" htmlFor="name">Your Name</label>
-                            <input
-                                type="text"
-                                id="name"
-                                className=" p-2 w-full border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="Enter your name"
-                            />
-                        </div>
-                        <div>
-                            <label className="block text-gray-600 text-sm font-medium mb-1" htmlFor="email">Email Address</label>
-                            <input
-                                type="email"
-                                id="email"
-                                className="w-full p-2 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="Enter your email"
-                            />
-                        </div>
-                        <div>
-                            <label className="block text-gray-600 text-sm font-medium mb-1" htmlFor="phone">Phone Number</label>
-                            <input
-                                type="tel"
-                                id="phone"
-                                className="w-full p-2 border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="Enter your phone number"
-                            />
-                        </div>
-                        <button
-                            type="submit"
-                            className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
-                        >
-                            Submit
-                        </button>
-                    </form>
-                </FormContainer>
-            </HeroContainer>
-        </div>
-    );
+
+
+      {/* Right Section */}
+      <div className="mt-8 lg:mt-0 lg:ml-8 w-full lg:w-auto">
+        <img
+          src={social} // Replace with your actual image URL
+          alt="Happy User"
+          className="w-60 mx-auto md:w-full object-cover"
+        />
+      </div>
+    </section>
+  );
 };
-
-const HeroContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 3rem 2rem 3rem;
-    gap: 2rem;
-
-    @media (min-width: 768px) {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-`;
-
-const TextContent = styled.div`
-    flex: 1;
-    text-align: center;
-
-    @media (min-width: 768px) {
-        text-align: left;
-    }
-`;
-
-const FormContainer = styled.div`
-    flex: 1;
-    max-width: 400px;  /* Decrease form width */
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-
-    @media (min-width: 768px) {
-        max-width: 450px;  /* Ensure the form has a reasonable max width on larger screens */
-    }
-`;
-
-const CallToAction = styled.a`
-    display: inline-block;
-    text-decoration: none;
-`;
 
 export default Hero;
