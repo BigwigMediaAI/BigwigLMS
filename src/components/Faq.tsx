@@ -36,12 +36,7 @@ function FAQ() {
       question: "Does BigwigLms offer analytics features?",
       answer:
         "Yes, BigwigLms comes equipped with powerful analytics tools to track key metrics like lead conversion rates, agent performance, property trends, and more to help you make data-driven decisions.",
-    },
-    {
-      question: "How do I get started with BigwigLms?",
-      answer:
-        "Getting started is easy. Schedule a demo, and we'll guide you through the setup process, ensuring BigwigLms is fully customized to your business needs.",
-    },
+    }
   ];
   
 

@@ -11,21 +11,13 @@ const Hero: React.FC = () => {
     <span className="ml-1 text-blue-500">🚀</span>
   </h4>
   <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
-    Take Control of Your Leads with Ease
+    Take Control of Your Leads with Bigwig LMS
   </h1>
   <p className="text-gray-600 leading-relaxed">
     Simplify the way you manage, track, and nurture leads. From capturing new opportunities to sealing the deal, our powerful lead management tools help you stay ahead of the curve.
   </p>
-  <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center justify-center lg:justify-start">
-    <button className="bg-blue-600 text-white font-semibold py-3 px-6 rounded hover:bg-blue-700 transition">
-      Get Started Today
-    </button>
-    <button className="border border-blue-600 text-blue-600 font-semibold py-3 px-6 rounded hover:bg-blue-100 transition">
-      Request a Demo
-    </button>
-  </div>
   <p className="text-gray-500 text-sm">
-    Trusted by teams worldwide | Free trial available
+    Trusted by teams worldwide
   </p>
 </div>
 
