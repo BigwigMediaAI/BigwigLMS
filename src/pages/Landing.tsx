@@ -11,6 +11,7 @@ import Clients from "../components/OurClient";
 import Blog from "../components/Blog";
 import ContactUs from "../components/Contact";
 import { FaRegMessage } from "react-icons/fa6";
+import TestimonialSection from "../components/Testimonial";
 
 
 
@@ -56,6 +57,7 @@ function Landing() {
             <Clients/>
             <StatsSection/>
             <Features/>
+            <TestimonialSection/>
             <Blog/>
             <AboutUs/>
             <FAQ/>
