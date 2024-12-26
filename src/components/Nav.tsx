@@ -130,6 +130,12 @@ function Nav() {
           <button onClick={() => handleScrollToSection('blog')} className="hover:text-black">
             Blogs
           </button>
+          <button
+            onClick={() => window.open('/team', '_blank')}
+            className="hover:text-black"
+          >
+            Team
+          </button>
         </div>
 
         <div className="md:block hidden">
@@ -148,7 +154,7 @@ function Nav() {
     )}
 
       {isOpen && (
-        <div className="absolute text-lg top-14 right-0 bg-white shadow-lg rounded-md p-4 flex flex-col space-y-4 z-50 h-[30vh] w-full max-w-md">
+        <div className="absolute text-lg top-14 right-0 bg-white shadow-lg rounded-md p-4 flex flex-col space-y-4 z-50 h-[40vh] w-full max-w-md">
           <button onClick={() => handleScrollToSection('home')} className="hover:text-black">
             Home
           </button>
@@ -160,6 +166,12 @@ function Nav() {
           </button>
           <button onClick={() => handleScrollToSection('blog')} className="hover:text-black">
             Blogs
+          </button>
+          <button
+            onClick={() => window.open('/team', '_blank')}
+            className="hover:text-black"
+          >
+            Team
           </button>
           <button
             onClick={() => handleScrollToSection('faq')}
