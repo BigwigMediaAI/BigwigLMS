@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import social from "../assets/Flow.png"
+import social from "../assets/Lead management.svg"
 import ContactUs from "./Contact";
 
 const Hero: React.FC = () => {
