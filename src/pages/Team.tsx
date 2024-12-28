@@ -21,13 +21,20 @@ const Team: React.FC = () => {
           <p className="text-gray-600 md:text-center text-justify">
           Make way for Bigwig Media, the superhero of the digital marketing world with a black belt in AI tech! Our mission? To catapult businesses like yours straight into the glitzy realm of online success. 
           </p>
-          <h2 className="font-bold text-gray-700 mt-6 text-center text-2xl">About Bigwig LMS</h2>
-          <h2 className="text-gray-600 mt-4 md:text-center text-justify">
-          We don't just talk a big game -- we deliver. Whether it's magnetizing leads like bees to honey, bolstering your brand till it's as big as you wish, fanning the flames of creativity, conjuring mind-blowing content, or playing king of the hill one search engine at a time—we've got the magic sauce.
-          </h2>
-          <h2 className="text-gray-600 mt-4 md:text-center text-justify">
-          When it comes to teamwork, we're like ants at a picnic. With over 70 committed professionals in our corner, we hustle and haggle - all for your success. So, strap on your seatbelt, and let Bigwig Media take you on a thrilling ride to the top!          </h2>
-        </div>
+          <h2 className="font-bold text-gray-700 mt-6 text-center text-2xl">About Bigwig Lead Management</h2>
+<h2 className="text-gray-600 text-justify md:text-center mt-4">
+  Supercharge your lead management journey effortlessly with Bigwig LMS, your AI-powered, all-in-one solution! Imagine seamlessly capturing leads, automating follow-ups, and tracking every opportunity like a pro. Say goodbye to manual chaos and hello to streamlined lead handling that drives conversions and builds relationships.
+</h2>
+<h2 className="text-gray-600 text-justify md:text-center mt-4">
+  Engage with your prospects faster than ever, nurture them through smart automation, and gain actionable insights into their preferences and behaviors. Whether you're a growing startup or a thriving enterprise, Bigwig LMS adapts to your unique business needs and helps you achieve sales success.
+</h2>
+<h2 className="text-gray-600 text-justify md:text-center mt-4">
+  We’ve got your back! With a team of 40+ lead management experts and cutting-edge tools, we're here to transform how you manage, prioritize, and close deals. Our platform ensures you never miss an opportunity and always stay ahead of the competition.
+</h2>
+<h2 className="text-gray-600 text-center mt-4 font-bold">
+  Bigwig LMS: Your ultimate partner in turning leads into loyal customers.
+</h2>
+</div>
       </div>
     </section>
     </>
