@@ -79,32 +79,41 @@ const LayoutComponent: React.FC = () => {
       >
         {/* Left Side (Text Section) */}
         <div className="md:w-1/2 w-full text-left md:mr-8 mb-4 md:mb-0">
-        <h1 className="text-2xl md:text-4xl font-semibold mb-4 md:mb-8">
-  <span className={`slide-in heading block ${isVisible ? "animate" : ""}`}>
-    Bigwig Real Estate CRM is crafted
-  </span>
-  <span className={`slide-in heading block ${isVisible ? "animate" : ""}`}>
-    by industry leaders
-  </span>
-  <span className={`slide-in heading block ${isVisible ? "animate" : ""}`}>
-    to revolutionize real estate management.
-  </span>
-</h1>
+          <h1 className="text-2xl md:text-4xl font-semibold mb-4 md:mb-8">
+            <span
+              className={`slide-in heading block ${isVisible ? "animate" : ""}`}
+            >
+              Empowering Real Estate Professionals
+            </span>
+            <span
+              className={`slide-in heading block ${isVisible ? "animate" : ""}`}
+            >
+              with a Cutting-Edge Lead Management System
+            </span>
+            <span
+              className={`slide-in heading block ${isVisible ? "animate" : ""}`}
+            >
+              Designed to Streamline and Revolutionize Sales.
+            </span>
+          </h1>
 
-
-<p className="text-lg md:text-2xl">
-  <span className={`slide-in subheading block ${isVisible ? "animate" : ""}`}>
-    Designed with a deep understanding of the
-  </span>
-  <span className={`slide-in subheading block ${isVisible ? "animate" : ""}`}>
-    twists, turns, and triumphs
-  </span>
-  <span className={`slide-in subheading block ${isVisible ? "animate" : ""}`}>
-    unique to the Real Estate Industry.
-  </span>
-</p>
-
-
+          <p className="text-lg md:text-2xl">
+            <span
+              className={`slide-in subheading block ${isVisible ? "animate" : ""}`}
+            >
+              Built with a deep understanding of the challenges
+            </span>
+            <span
+              className={`slide-in subheading block ${isVisible ? "animate" : ""}`}
+            >
+              and opportunities in the real estate market,
+            </span>
+            <span
+              className={`slide-in subheading block ${isVisible ? "animate" : ""}`}
+            >
+              delivering powerful tools to accelerate growth.
+            </span>
+          </p>
         </div>
 
         {/* Right Side (Image Section) */}
