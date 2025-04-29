@@ -23,14 +23,14 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {/* Branding Section */}
           <div className="md:col-span-1 ">
-            <span className="text-red-500 text-2xl font-bold">B</span>
-            <span className="text-blue-500 text-2xl font-bold">i</span>
-            <span className="text-yellow-500 text-2xl font-bold">g</span>
-            <span className="text-green-500 text-2xl font-bold">w</span>
-            <span className="text-purple-500 text-2xl font-bold">i</span>
-            <span className="text-pink-500 text-2xl font-bold">g</span>
-            <span className="text-teal-500 text-2xl font-bold">LMS</span>
-            <p className="text-gray-400">
+            <span className="text-red-500 text-3xl font-bold">B</span>
+            <span className="text-blue-500 text-3xl font-bold">i</span>
+            <span className="text-yellow-500 text-3xl font-bold">g</span>
+            <span className="text-green-500 text-3xl font-bold">w</span>
+            <span className="text-purple-500 text-3xl font-bold">i</span>
+            <span className="text-pink-500 text-3xl font-bold">g</span>
+            <span className="text-teal-500 text-3xl font-bold">LMS</span>
+            <p className="text-gray-400 mt-3">
               Empowering your lead management with cutting-edge tools and
               seamless automation. Turn prospects into loyal customers
               effortlessly.
