@@ -198,17 +198,22 @@ function Nav() {
             Blogs
           </button>
           <button
+            onClick={() => handleScrollToSection("faq")}
+            className="hover:text-gray-300"
+          >
+            FAQ
+          </button>
+          <button
             onClick={() => window.open("/team", "_blank")}
             className="hover:text-gray-300"
           >
             Team
           </button>
-          <button
-            onClick={() => handleScrollToSection("faq")}
-            className="w-1/2 mx-auto block text-center bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg focus:outline-none text-lg sm:text-xl shadow-md"
-          >
-            FAQ
-          </button>
+          <a href="/contact">
+            <button className="w-1/2 mx-auto block text-center bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg focus:outline-none text-lg sm:text-xl shadow-md">
+              Contact Us
+            </button>
+          </a>
         </div>
       )}
     </nav>
