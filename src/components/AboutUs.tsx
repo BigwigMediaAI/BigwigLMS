@@ -19,7 +19,7 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <section id="about" className=" py-4 mb-10">
+    <section id="about" className=" py-4 px-5 mb-10">
       <h2 className="text-5xl font-bold text-white mb-4 text-center">
         About Us
       </h2>
