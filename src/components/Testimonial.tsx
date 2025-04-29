@@ -50,7 +50,7 @@ const TestimonialSection = () => {
   return (
     <section id="case" className="py-16 bg-white">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-5xl font-semibold text-gray-900 mb-8">
+        <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-8">
           What Our Partners Are Saying
         </h2>
 

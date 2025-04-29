@@ -67,7 +67,7 @@ const Blog = () => {
 
   return (
     <div className="w-11/12 mx-auto px-4 mb-10 py-4 mt-10" id="blog">
-      <h1 className="text-5xl font-bold text-white text-center mb-4">
+      <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-4">
         Our Trending Blogs
       </h1>
       <p className="text-center text-white text-md md:text-xl mb-8">

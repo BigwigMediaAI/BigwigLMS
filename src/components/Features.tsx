@@ -177,7 +177,7 @@ function Features() {
   return (
     <div id="features" className="md:w-11/12 mx-auto px-4 py-16">
       <div className="overflow-x-hidden">
-        <h2 className="text-5xl font-bold text-white text-center mb-10 tracking-tight">
+        <h2 className="text-4xl md:text-5xl font-bold text-white text-center mb-10 tracking-tight">
           Our Services
         </h2>
         {featureData.map((feature, index) => (
