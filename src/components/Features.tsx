@@ -175,52 +175,56 @@ function Features() {
   ];
 
   return (
-    <div id="features" className="md:w-11/12 mx-auto px-4 py-6">
-      <h2 className="text-5xl font-semibold text-white text-center mb-10 tracking-tight">
-        Our Services
-      </h2>
-      {featureData.map((feature, index) => (
-        <div
-          key={index}
-          id={feature.id}
-          className={` mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-2 md:gap-8 mt-${
-            index === 0 ? 0 : 16
-          } mt-20`}
-        >
-          {/* Feature Content */}
+    <div id="features" className="md:w-11/12 mx-auto px-4 py-16">
+      <div className="overflow-x-hidden">
+        <h2 className="text-5xl font-bold text-white text-center mb-10 tracking-tight">
+          Our Services
+        </h2>
+        {featureData.map((feature, index) => (
           <div
-            className={`${index % 2 === 0 ? "" : "order-1 md:order-2"}`}
-            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+            key={index}
+            id={feature.id}
+            className={` mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-2 md:gap-8 mt-${
+              index === 0 ? 0 : 16
+            } mt-20`}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight transition-colors duration-300">
-              {feature.title}
-            </h2>
-            <p className="text-lg text-gray-300 mt-4">{feature.description}</p>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-gray-300">
-              {feature.listItems.map((item, i) => (
-                <ul key={i} className="transition-colors duration-300">
-                  <li className="flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-blue-600"></span>{" "}
-                    {item}
-                  </li>
-                </ul>
-              ))}
+            {/* Feature Content */}
+            <div
+              className={`${index % 2 === 0 ? "" : "order-1 md:order-2"}`}
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight transition-colors duration-300">
+                {feature.title}
+              </h2>
+              <p className="text-lg text-gray-300 mt-4">
+                {feature.description}
+              </p>
+              <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-gray-300">
+                {feature.listItems.map((item, i) => (
+                  <ul key={i} className="transition-colors duration-300">
+                    <li className="flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-blue-600"></span>{" "}
+                      {item}
+                    </li>
+                  </ul>
+                ))}
+              </div>
+            </div>
+
+            {/* Image */}
+            <div
+              className="flex justify-center mb-10 md:mb-4 order-2 md:order-1"
+              data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
+            >
+              <img
+                src={feature.imageUrl}
+                alt={feature.title}
+                className="w-full max-w-md md:max-w-lg"
+              />
             </div>
           </div>
-
-          {/* Image */}
-          <div
-            className="flex justify-center mb-10 md:mb-4 order-2 md:order-1"
-            data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
-          >
-            <img
-              src={feature.imageUrl}
-              alt={feature.title}
-              className="w-96 max-w-md md:max-w-lg transition-transform duration-300"
-            />
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

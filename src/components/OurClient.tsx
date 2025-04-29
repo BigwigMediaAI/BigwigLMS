@@ -48,7 +48,7 @@ const Clients: React.FC = () => {
   return (
     <div className="w-full mx-auto md:pt-6  bg-white  ">
       <div>
-        <h1 className="text-2xl md:text-3xl font-semibold px-5 text-center text-gray-800">
+        <h1 className="text-5xl font-bold px-5 text-center text-gray-800">
           Our Clients
         </h1>
       </div>
