@@ -1,7 +1,5 @@
-
 import document from "../assets/features/document (1).webp";
-import communication from '../assets/features/counselor.webp';
-import { motion } from "framer-motion";
+import communication from "../assets/features/counselor.webp";
 
 function Features() {
   const featureData = [
@@ -18,10 +16,10 @@ function Features() {
         "Data Enrichment",
         "Automated Workflows",
         "Analytics and Reporting",
-        "Lead Qualification"
-
+        "Lead Qualification",
       ],
-      imageUrl: "https://metroguild.com/wp-content/uploads/2024/03/Precise-Source-Tracking.png",
+      imageUrl:
+        "https://metroguild.com/wp-content/uploads/2024/03/Precise-Source-Tracking.png",
       id: "Lead-Capture",
     },
     {
@@ -37,9 +35,10 @@ function Features() {
         "Workflow Automation",
         "Real-Time Notifications",
         "Activity Tracking",
-        "Lead Nurturing"
+        "Lead Nurturing",
       ],
-      imageUrl: "https://www.agentlegend.com/hubfs/Imported_Blog_Media/7-Real-Estate-Lead-Lifecycle-Stages-You-Should-Be-Tracking.png",
+      imageUrl:
+        "https://www.agentlegend.com/hubfs/Imported_Blog_Media/7-Real-Estate-Lead-Lifecycle-Stages-You-Should-Be-Tracking.png",
       id: "Lead-Management",
     },
     {
@@ -57,7 +56,8 @@ function Features() {
         "Lead Distribution Limits",
         "Mobile Accessibility",
       ],
-      imageUrl: "https://metroguild.com/wp-content/uploads/2023/08/Intelligent-Lead-assignment-1-768x476.png",
+      imageUrl:
+        "https://metroguild.com/wp-content/uploads/2023/08/Intelligent-Lead-assignment-1-768x476.png",
       id: "Lead-Assignment",
     },
     {
@@ -73,9 +73,10 @@ function Features() {
         "Lead Nurturing Campaigns",
         "Drip Email Campaigns",
         "Call Scheduling and Logging",
-        "Progress Monitoring"
+        "Progress Monitoring",
       ],
-      imageUrl: "https://metroguild.com/wp-content/uploads/2023/08/feature-omnichannel-768x502.png",
+      imageUrl:
+        "https://metroguild.com/wp-content/uploads/2023/08/feature-omnichannel-768x502.png",
       id: "Follow-Up",
     },
     {
@@ -91,9 +92,10 @@ function Features() {
         "Compliance and Data Security",
         "Real-Time Alerts",
         "Event and Webinar Analytics",
-        "Predictive Analytics"
+        "Predictive Analytics",
       ],
-      imageUrl: "https://metroguild.com/wp-content/uploads/2023/08/Actionable-Insights-1-768x526.png",
+      imageUrl:
+        "https://metroguild.com/wp-content/uploads/2023/08/Actionable-Insights-1-768x526.png",
       id: "Analytics",
     },
     {
@@ -109,9 +111,10 @@ function Features() {
         "Marketing Campaign Integration",
         "Lead Scoring and Prioritization",
         "Security and Compliance",
-        "Integration with Popular Tools"
+        "Integration with Popular Tools",
       ],
-      imageUrl: "https://metroguild.com/wp-content/uploads/2023/08/Hyper-Personalized-engagement-768x486.png",
+      imageUrl:
+        "https://metroguild.com/wp-content/uploads/2023/08/Hyper-Personalized-engagement-768x486.png",
       id: "Integration",
     },
     {
@@ -127,9 +130,10 @@ function Features() {
         "SMS Notifications",
         "WhatsApp or Social Media Notifications",
         "Payment and Fee Reminders",
-        "Push Notifications"
+        "Push Notifications",
       ],
-      imageUrl: "https://metroguild.com/wp-content/uploads/2023/08/real-estate-Hyper-Presonalized-300x300.png",
+      imageUrl:
+        "https://metroguild.com/wp-content/uploads/2023/08/real-estate-Hyper-Presonalized-300x300.png",
       id: "Automated",
     },
     {
@@ -145,7 +149,7 @@ function Features() {
         "Mobile Compatibility",
         "Automated Categorization",
         "Real-Time Status Updates",
-        "Manual Review Options"
+        "Manual Review Options",
       ],
       imageUrl: document, // Keep the same image for now
       id: "Document",
@@ -163,76 +167,58 @@ function Features() {
         "Role-Based Task Assignment",
         "Real-Time Notifications",
         "Automation Rules & Triggers",
-        "Workflow Monitoring & Analytics"
+        "Workflow Monitoring & Analytics",
       ],
       imageUrl: communication, // Keep the same image for now
       id: "Task",
     },
   ];
-  
-  
-  const variants = {
-    hidden: (direction: string) => ({
-      opacity: 0,
-      x: direction === "left" ? -100 : 100,
-    }),
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-    },
-  };
 
   return (
-    <div id="features" className="py-16 px-8 sm:px-12">
+    <div id="features" className="md:w-11/12 mx-auto px-4 py-16">
+      <h2 className="text-5xl font-extrabold text-white text-center mb-10 tracking-tight">
+        Our Services
+      </h2>
       {featureData.map((feature, index) => (
         <div
           key={index}
           id={feature.id}
-          className={`max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-2 md:gap-8 mt-${
+          className={` mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-2 md:gap-8 mt-${
             index === 0 ? 0 : 16
-          } mt-10`}
+          } mt-20`}
         >
-          {/* Feature */}
-          <motion.div
-            className={index % 2 === 0 ? "" : "order-1 md:order-2"}
-            custom={index % 2 === 0 ? "left" : "right"}
-            initial="hidden"
-            animate="visible"
-            variants={variants}
+          {/* Feature Content */}
+          <div
+            className={`${index % 2 === 0 ? "" : "order-1 md:order-2"}`}
+            data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight transition-colors duration-300">
+            <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight transition-colors duration-300">
               {feature.title}
             </h2>
-            <p className="text-lg text-gray-600 mt-4">{feature.description}</p>
-            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-gray-800">
+            <p className="text-lg text-gray-300 mt-4">{feature.description}</p>
+            <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-gray-300">
               {feature.listItems.map((item, i) => (
                 <ul key={i} className="transition-colors duration-300">
                   <li className="flex items-center gap-2">
-                    <span className="text-blue-500 text-xl">✔</span> {item}
+                    <span className="w-2 h-2 rounded-full bg-blue-600"></span>{" "}
+                    {item}
                   </li>
                 </ul>
               ))}
             </div>
-          </motion.div>
+          </div>
 
           {/* Image */}
-          <motion.div
+          <div
             className="flex justify-center mb-10 md:mb-4 order-2 md:order-1"
-            custom={index % 2 === 0 ? "right" : "left"}
-            initial="hidden"
-            animate="visible"
-            variants={variants}
+            data-aos={index % 2 === 0 ? "fade-left" : "fade-right"}
           >
             <img
               src={feature.imageUrl}
               alt={feature.title}
               className="w-96 max-w-md md:max-w-lg transition-transform duration-300"
             />
-          </motion.div>
+          </div>
         </div>
       ))}
     </div>
