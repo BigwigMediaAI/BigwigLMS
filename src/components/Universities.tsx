@@ -1,131 +1,54 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const LayoutComponent: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef<HTMLDivElement | null>(null);
-
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
+    AOS.init({ once: true, duration: 600, easing: "ease-in-out" });
   }, []);
 
   return (
-    <>
-      <style>
-        {`
-          @keyframes slideIn {
-            from {
-              opacity: 0;
-              transform: translateX(-50%);
-            }
-            to {
-              opacity: 1;
-              transform: translateX(0);
-            }
-          }
+    <div className="w-full md:w-11/12 mx-auto flex flex-col md:flex-row items-center px-4 md:px-0 py-10 md:py-12 bg-black">
+      {/* Left Side (Text Section) */}
+      <div className="md:w-1/2 w-full text-left md:mr-8 mb-4 md:mb-0">
+        <h1 className="text-2xl md:text-4xl font-semibold mb-4 md:mb-8 text-white">
+          <span data-aos="fade-right" data-aos-delay="200" className="block">
+            Empowering Real Estate Professionals
+          </span>
+          <span data-aos="fade-right" data-aos-delay="400" className="block">
+            with a Cutting-Edge Lead Management System
+          </span>
+          <span data-aos="fade-right" data-aos-delay="600" className="block">
+            Designed to Streamline and Revolutionize Sales.
+          </span>
+        </h1>
 
-          .slide-in {
-            opacity: 0; /* Hidden before animation starts */
-          }
-
-          .animate {
-            animation: slideIn 0.6s ease-in-out forwards;
-          }
-
-          .heading:nth-child(1) {
-            animation-delay: 0.2s;
-          }
-
-          .heading:nth-child(2) {
-            animation-delay: 0.4s;
-          }
-
-          .heading:nth-child(3) {
-            animation-delay: 0.6s;
-          }
-
-          .subheading:nth-child(1) {
-            animation-delay: 0.8s;
-          }
-
-          .subheading:nth-child(2) {
-            animation-delay: 1s;
-          }
-
-          .subheading:nth-child(3) {
-            animation-delay: 1.2s;
-          }
-        `}
-      </style>
-      <div
-        ref={sectionRef}
-        className="flex flex-col md:flex-row items-center p-4 px-10 md:px-20 py-10 md:py-16 "
-      >
-        {/* Left Side (Text Section) */}
-        <div className="md:w-1/2 w-full text-left md:mr-8 mb-4 md:mb-0">
-          <h1 className="text-2xl md:text-4xl font-semibold mb-4 md:mb-8">
-            <span
-              className={`slide-in heading block ${isVisible ? "animate" : ""}`}
-            >
-              Empowering Real Estate Professionals
-            </span>
-            <span
-              className={`slide-in heading block ${isVisible ? "animate" : ""}`}
-            >
-              with a Cutting-Edge Lead Management System
-            </span>
-            <span
-              className={`slide-in heading block ${isVisible ? "animate" : ""}`}
-            >
-              Designed to Streamline and Revolutionize Sales.
-            </span>
-          </h1>
-
-          <p className="text-lg md:text-2xl">
-            <span
-              className={`slide-in subheading block ${isVisible ? "animate" : ""}`}
-            >
-              Built with a deep understanding of the challenges
-            </span>
-            <span
-              className={`slide-in subheading block ${isVisible ? "animate" : ""}`}
-            >
-              and opportunities in the real estate market,
-            </span>
-            <span
-              className={`slide-in subheading block ${isVisible ? "animate" : ""}`}
-            >
-              delivering powerful tools to accelerate growth.
-            </span>
-          </p>
-        </div>
-
-        {/* Right Side (Image Section) */}
-        <div className="md:w-1/2 w-full">
-          <img
-            src="https://www.sell.do/assets/selldo_v3/overview-rect-40f02ce8cab3b93b45ba44226b6c67b6.svg"
-            alt="Overview of Sell.Do Real Estate CRM Features"
-            className="w-full h-auto rounded-lg"
-          />
-        </div>
+        <p className="text-lg md:text-2xl text-gray-300">
+          <span data-aos="fade-right" data-aos-delay="800" className="block">
+            Built with a deep understanding of the challenges
+          </span>
+          <span data-aos="fade-right" data-aos-delay="1000" className="block">
+            and opportunities in the real estate market,
+          </span>
+          <span data-aos="fade-right" data-aos-delay="1200" className="block">
+            delivering powerful tools to accelerate growth.
+          </span>
+        </p>
       </div>
-    </>
+
+      {/* Right Side (Image Section) */}
+      <div
+        className="md:w-1/2 w-full"
+        data-aos="zoom-in-left"
+        data-aos-delay="500"
+      >
+        <img
+          src="https://www.sell.do/assets/selldo_v3/overview-rect-40f02ce8cab3b93b45ba44226b6c67b6.svg"
+          alt="Overview of Sell.Do Real Estate CRM Features"
+          className="w-full h-auto rounded-lg"
+        />
+      </div>
+    </div>
   );
 };
 

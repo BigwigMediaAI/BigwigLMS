@@ -13,58 +13,59 @@ const images = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTotQAqu-hz_UJjFe1Ct3umM7jpmauuB_VkKQ&s",
   "https://logowik.com/content/uploads/images/paradigm7416.jpg",
   "https://cdn.prod.website-files.com/6128d68a91ec1144618a169a/655ca74d4414aabe398ad683_Saarathi_black_orange_tm.svg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbxKtGVNyB6hUJK-WvWQyKY_76gg0pp-oIPw&s"
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbxKtGVNyB6hUJK-WvWQyKY_76gg0pp-oIPw&s",
 ];
 
 const Clients: React.FC = () => {
-    const settings = {
-      infinite: true, // Loop infinitely
-      speed: 3000, // Speed of slide transition (in ms)
-      slidesToShow: 5, // Number of visible slides
-      slidesToScroll: 1, // Number of slides to scroll at a time
-      autoplay: true, // Enable automatic sliding
-      autoplaySpeed: 0, // Continuous autoplay with no delay
-      cssEase: "linear",
-      arrows: false,
-      onHover:false,
-      responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
+  const settings = {
+    infinite: true, // Loop infinitely
+    speed: 3000, // Speed of slide transition (in ms)
+    slidesToShow: 5, // Number of visible slides
+    slidesToScroll: 1, // Number of slides to scroll at a time
+    autoplay: true, // Enable automatic sliding
+    autoplaySpeed: 0, // Continuous autoplay with no delay
+    cssEase: "linear",
+    arrows: false,
+    onHover: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
         },
-        {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2,
-                slidesToScroll: 1,
-            }
-        }
-    ] // Smooth animation
-    };
-  
-    return (
-      <div className="w-full mx-auto  bg-white  ">
-        <div>
-        <h1 className="text-2xl md:text-3xl font-semibold px-5 text-center text-gray-800">Our Clients</h1>
-        </div>
-        
-        <Slider {...settings}>
-          {images.map((image, index) => (
-            <div key={index} className="flex justify-center">
-              <img
-                src={image}
-                alt={`logo-${index}`}
-                className="w-36 h-36 object-contain"
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-    );
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ], // Smooth animation
   };
-  
-  export default Clients;
-  
+
+  return (
+    <div className="w-full mx-auto md:pt-6  bg-white  ">
+      <div>
+        <h1 className="text-2xl md:text-3xl font-semibold px-5 text-center text-gray-800">
+          Our Clients
+        </h1>
+      </div>
+
+      <Slider {...settings}>
+        {images.map((image, index) => (
+          <div key={index} className="flex justify-center">
+            <img
+              src={image}
+              alt={`logo-${index}`}
+              className="w-36 h-36 object-contain"
+            />
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
+
+export default Clients;
