@@ -123,7 +123,7 @@ function Footer() {
           {/* Social Icons */}
           <div className="flex space-x-4 mb-4 md:mb-0">
             <a
-              href="https://www.facebook.com/bigwigmedia.in/"
+              href="https://www.facebook.com/profile.php?id=61575340735142"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xl hover:text-white transition"
@@ -131,7 +131,7 @@ function Footer() {
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
             <a
-              href="https://www.instagram.com/bigwigmedia/"
+              href="https://www.instagram.com/bigwigdigital/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xl hover:text-white transition"
@@ -139,7 +139,7 @@ function Footer() {
               <FontAwesomeIcon icon={faInstagram} />
             </a>
             <a
-              href="https://www.youtube.com/channel/UCA0GIfKW7ORxUT6_mMnEEzQ"
+              href="https://www.youtube.com/@BigwigDigital2024"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xl hover:text-white transition"
@@ -147,7 +147,7 @@ function Footer() {
               <FontAwesomeIcon icon={faYoutube} />
             </a>
             <a
-              href="https://x.com/bigwig_media"
+              href="https://x.com/bigwig_digital"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xl hover:text-white transition"
