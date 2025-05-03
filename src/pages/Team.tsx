@@ -7,9 +7,9 @@ const Team: React.FC = () => {
   // Sample data for team members
 
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white pt-12">
       <Nav2 />
-      <section className=" container mx-auto py-12 px-4 lg:px-8">
+      <section className=" container mx-auto py-10 px-4 lg:px-8">
         <div className="md:11/12 mx-auto px-6 md:px-8 gap-8">
           {/* CEO Section */}
           <div className=" bg-gray-100 p-6 rounded-lg shadow-lg">
